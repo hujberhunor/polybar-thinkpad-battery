@@ -20,5 +20,5 @@ battery at full (threshold) capacity (when the light on the port is white
 When unplugged and dischargint (no light on the port)
 ![discharge](https://user-images.githubusercontent.com/50179148/221407987-7edfc716-d989-42a2-999f-c996f53c82da.png)
 
-Wen chargint (red led on the port)
+When charging (red led on the port)
 ![chargint](https://user-images.githubusercontent.com/50179148/221408249-b0268a4b-9fd5-48ff-8ad8-55a2a84d9507.png)
