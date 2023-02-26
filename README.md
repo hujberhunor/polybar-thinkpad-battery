@@ -34,3 +34,4 @@ You have to edit x files:
 2. polybar config file - just copy/paste mine to yours and then add the path to the of the battery.sh script to the `exec = ` part and the second batteries_rofi.sh -s path to the `left-click =`.
 
 Thats all. For modifications ask chatGPT or make an issue i think.
+Edit: I dont own the rofi style config, i found it somewhere, the credentials are in the file. Thank you @adi1090x.
