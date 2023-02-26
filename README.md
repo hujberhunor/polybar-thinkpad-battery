@@ -1,23 +1,27 @@
 # polybar-thinkpad-battery
-Polybar script/module that combines 2 battery and displays it. 
+
+## About the repo
+**This is my first "project".** I dont know anything about github and how to use it or even about bash.
+I made this script with my existing knowlege and chatGPT help to solve the problem i couldnt find souution.
 
 ## What does this script does?
-This script prints the average battery of your 2 batteries. Then displays the current watt usage. The "AC" tag displays that if the cabel is plugged or not. You can remove it, it is not necessary. 
+Polybar script/module that takes your 2 batteries average and displays it + the status (chargint, discharging etc). 
+Then displays the current watt usage. The "AC" tag displays that if the cabel is plugged or not. 
 
 ## Dependencies(?)
 nerdfont / awesomefonts for the icon. if you want different icon in terminal press ctrl+alt+u and then select one, this tool will automatically paste the selected icon. 
 
 ## Todo
--[] somehow make the left-click action work so it can display each battery side by side. 
+-[] somehow make the `left-click` action work so it can display each battery side by side in the config.
+I have tried with one script and a argument but that did not work, so i/we(?) made 2 separete script but stil does not work.
 
-*This is my first "project".*
-cI dont know anything about github and how to use it or even about bash.
-I made this script with my existing knowlege and chatGPT help to solve the problem i couldnt find souution.
 
+
+---
 battery at full (threshold) capacity (when the light on the port is white
 ![at-full](https://user-images.githubusercontent.com/50179148/221407983-4ed8b309-f510-41e4-aed8-97aae583edac.png)
 
-When unplugged and dischargint (no light on the port)
+When unplugged and discharging (no light on the port)
 ![discharge](https://user-images.githubusercontent.com/50179148/221407987-7edfc716-d989-42a2-999f-c996f53c82da.png)
 
 When charging (red led on the port)
