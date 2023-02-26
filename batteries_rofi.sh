@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Set theme and colors
-rofi_theme="/home/i3hunor/.config/rofi/powermenu/style-2.rasi"
+rofi_theme="/path/to/style-2.rasi"
 rofi_bg="#2E3440"
 rofi_fg="#ECEFF4"
 
