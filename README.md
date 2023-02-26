@@ -26,3 +26,11 @@ When unplugged and discharging (no light on the port)
 
 When charging (red led on the port)
 ![chargint](https://user-images.githubusercontent.com/50179148/221408249-b0268a4b-9fd5-48ff-8ad8-55a2a84d9507.png)
+
+## How to install
+I dont know how to create a script so you have to do this manually. 
+You have to edit x files:
+1. batteries_rofi.sh - change the `rofi_theme =` path to the style.
+2. polybar config file - just copy/paste mine to yours and then add the path to the of the battery.sh script to the `exec = ` part and the second batteries_rofi.sh -s path to the `left-click =`.
+
+Thats all. For modifications ask chatGPT or make an issue i think.
