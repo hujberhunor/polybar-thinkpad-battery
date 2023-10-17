@@ -11,12 +11,6 @@ Then displays the current watt usage. The "AC" tag displays that if the cabel is
 ## Dependencies(?)
 nerdfont / awesomefonts for the icon. if you want different icon in terminal press ctrl+alt+u and then select one, this tool will automatically paste the selected icon. 
 
-## Todo
--[] somehow make the `left-click` action work so it can display each battery side by side in the config.
-I have tried with one script and a argument but that did not work, so i/we(?) made 2 separete script but stil does not work.
-
-
-
 ---
 battery at full (threshold) capacity (when the light on the port is white
 ![at-full](https://user-images.githubusercontent.com/50179148/221407983-4ed8b309-f510-41e4-aed8-97aae583edac.png)
