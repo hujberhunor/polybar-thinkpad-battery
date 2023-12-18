@@ -5,7 +5,7 @@
 I made this script with my existing knowlege and chatGPT help to solve the problem i couldnt find souution.
 
 ## What does this script does?
-Polybar script/module that takes your 2 batteries average and displays it + the status (chargint, discharging etc). 
+Polybar script/module that takes your 2 batteries average (weighted) and displays it + the status (chargint, discharging etc). 
 Then displays the current watt usage. The "AC" tag displays that if the cabel is plugged or not. 
 
 ## Dependencies(?)
@@ -26,6 +26,7 @@ I dont know how to create a script so you have to do this manually.
 You have to edit x files:
 1. batteries_rofi.sh - change the `rofi_theme =` path to the style.
 2. polybar config file - just copy/paste mine to yours and then add the path to the of the battery.sh script to the `exec = ` part and the second batteries_rofi.sh -s path to the `left-click =`.
+3. in the `avg_battery.sh` file you have to specify the weights that you want to use. I have a 72Wh and a 24Wh battery, so i used 25,72 weight. If you have batteries with the same capacity then comment that part out and use the simple average line.
 
 Thats all. For modifications ask chatGPT or make an issue i think.
 Edit: I dont own the rofi style config, i found it somewhere, the credentials are in the file. Thank you @adi1090x.
