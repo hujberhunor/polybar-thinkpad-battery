@@ -1,13 +1,25 @@
 #!/bin/bash
 
-# THIS IS ON THE BAR
+#################
+# This is the script that is on the bar
+#################
 
 # Get the current battery levels
 bat1=$(cat /sys/class/power_supply/BAT0/capacity)
 bat2=$(cat /sys/class/power_supply/BAT1/capacity)
 
+# Define the weights for each battery capacity 
+weight1=25  
+weight2=75 
+
+# Calculate the weighted average battery level 
+total_weight=$((weight1 + weight2))
+average=$(( (bat1 * weight1 + bat2 * weight2) / total_weight ))
+
+### RÉGI MEGOLDÁS
 # Calculate the average battery level
-average=$(( ($bat1 + $bat2) / 2 ))
+#average=$(( ($bat1 + $bat2) / 2 ))
+###
 
 # Get the charging status of each battery
 status1=$(cat /sys/class/power_supply/BAT0/status)
