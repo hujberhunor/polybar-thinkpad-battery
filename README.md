@@ -22,6 +22,7 @@ When charging (red led on the port)
 ![chargint](https://user-images.githubusercontent.com/50179148/221408249-b0268a4b-9fd5-48ff-8ad8-55a2a84d9507.png)
 
 Left click on the module:
+
 ![rofi](https://github.com/hujberhunor/polybar-thinkpad-battery/assets/50179148/f66044d5-9d2a-458a-9d66-3bb00c8c0851)
 
 
