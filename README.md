@@ -1,5 +1,10 @@
 # polybar-thinkpad-battery
 
+# Updated
+Now it can handle 72Wh and 24Wh battery automatically.
+So if you use a 72Wh (or any bigger than 24Wh) battery as external (as BAT1) the `avg_updated.sh` reads the Wh value and make the weight of the avg calculation based on that. 
+
+
 ## About the repo
 **This is my first "project".** I dont know anything about github and how to use it or even about bash.
 I made this script with my existing knowlege and chatGPT help to solve the problem i couldnt find solution.
