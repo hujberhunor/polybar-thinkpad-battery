@@ -1,0 +1,6 @@
+[module/battery]
+type = custom/script
+exec = "~/path/to/avg_updated.sh" ; The one it will display all the time. In this case the avg battery percentage. 
+interval = 2
+tail = true
+click-left = "~/path/to/batteries_rofi.sh" ; THe one that will diplay the batteries one by one. 
