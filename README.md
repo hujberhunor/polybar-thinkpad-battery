@@ -8,19 +8,8 @@
 I’m new to GitHub and bash scripting, and I created this script with my current knowledge and some assistance from ChatGPT to solve a problem I couldn’t find a solution for.  
 **Tested only on a ThinkPad T480.**
 
-## UPDATE
-The scripts are renamed: `avg-bat.sh` is `bat-status-bar.sh` and `batteries-rofi.sh` is `bat-dropdown-rofi.sh`.
-
-## Script Overview
-This Polybar module:
-1. Calculates the weighted average of your two batteries' charge levels. 
-2. Displays the charge status (charging, discharging, AC) along with current wattage.
-
-### New Features
-The script now supports 24Wh and 72Wh batteries. It detects which one is in the system, so you can swap them on the fly, and the script will adjust accordingly. If an external 72Wh (or any battery larger than 24Wh) is used as BAT1, the `avg_updated.sh` script reads the Wh value and adjusts the average calculation weight based on that.
-
-## Dependencies
-Requires **Nerd Fonts** or **Awesome Fonts** for the icons.
+# ThinkPad Battery Status for Polybar
+A Polybar module for monitoring ThinkPad batteries, dynamically handling multiple battery systems, displaying charge status, and providing a Rofi-based menu for detailed information.
 
 ## Screenshots
 - **Battery at Full Capacity** (White LED on port)
@@ -39,18 +28,52 @@ Requires **Nerd Fonts** or **Awesome Fonts** for the icons.
   
   ![rofi](https://github.com/hujberhunor/polybar-thinkpad-battery/assets/50179148/f66044d5-9d2a-458a-9d66-3bb00c8c0851)
 
-## Installation Guide
-This setup is manual, so you’ll need to edit a few files directly:
+## Features
+- Calculates the weighted average of battery charge based on capacity (24Wh, 48Wh, or 72Wh)
+- Displays charge status (charging, discharging, AC power) and current power consumption
+- A single click opens a Rofi-based menu with detailed battery information
+- Automatically detects and adjusts for battery swaps (e.g., switching between 24Wh and 72Wh)
 
-1. **`batteries_rofi.sh`**  
-   - Update the `rofi_theme` path to your preferred style file. The style file I use, `batteries_rofi_style.rasi`, is included in the repository.
+## What's New
+- **Support for 24Wh and 72Wh batteries**
+- **Automatic battery detection**: If a larger capacity battery (e.g., 72Wh) is connected as BAT1, the script automatically updates weight calculations
 
-2. **Polybar Configuration File**  
-   - Copy/paste the module configuration into your Polybar config file.
-   - Set the path for `battery.sh` in the `exec` field.
-   - Specify the path to `batteries_rofi.sh` in the `left-click` field.
+## Dependencies
+- `acpi` (to check battery status)
+- `rofi` (for the clickable menu)
+- `Nerd Fonts` or `Awesome Fonts` (for icons)
 
-3. **`avg_battery.sh`**  
-   - Set the weights for battery averaging based on your battery capacities. For example, I use weights of 25 and 72 for my 24Wh and 72Wh batteries. If your batteries have the same capacity, comment out this section and use the simple average calculation instead.
+## \*\* \*\*Installation
+
+1. **Copy the scripts to an accessible location, e.g.:**
+
+```bash
+mkdir -p ~/.config/polybar
+cp bat-status-bar.sh bat-dropdown-rofi.sh ~/.config/polybar/
+```
+
+2. **Add the following to your Polybar configuration** (`~/.config/polybar/config.ini`):
+
+```ini
+[module/battery]
+type = custom/script
+exec = ~/.config/polybar/bat-status-bar.sh
+click-left = ~/.config/polybar/bat-dropdown-rofi.sh
+interval = 10
+```
+
+3. **Update the Rofi theme in ****************************`bat-dropdown-rofi.sh`**************************** if necessary:**
+
+```bash
+rofi -show run -theme ~/.config/polybar/batteries_rofi_style.rasi
+```
+
+If you prefer a custom theme, edit the corresponding `.rasi` file.
+
+## Rofi Theme
+
+The Rofi theme is based on [@adi1090x](https://github.com/adi1090x/rofi). If you prefer a custom theme, modify the `batteries_rofi_style.rasi` file!
+
+---
 
 *Note*: I don’t own the Rofi style configuration; it’s credited to @adi1090x, and credentials are included in the file.
