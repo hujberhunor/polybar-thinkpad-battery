@@ -8,6 +8,9 @@
 I’m new to GitHub and bash scripting, and I created this script with my current knowledge and some assistance from ChatGPT to solve a problem I couldn’t find a solution for.  
 **Tested only on a ThinkPad T480.**
 
+## UPDATE
+The scripts are renamed: `avg-bat.sh` is `bat-status-bar.sh` and `batteries-rofi.sh` is `bat-dropdown-rofi.sh`.
+
 ## Script Overview
 This Polybar module:
 1. Calculates the weighted average of your two batteries' charge levels. 
