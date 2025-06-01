@@ -2,7 +2,7 @@
 #!/bin/bash
 
 # Set theme and colors
-rofi_theme="/home/i3hunor/.scripts/panel/battery-panel/batteries_rofi_style.rasi"
+rofi_theme="~/.scripts/panel/battery-panel/batteries_rofi_style.rasi"
 rofi_bg="#2E3440"
 rofi_fg="#ECEFF4"
 
