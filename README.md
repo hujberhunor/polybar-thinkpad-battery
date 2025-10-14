@@ -4,9 +4,6 @@ A Polybar module for monitoring ThinkPad batteries, dynamically handling multipl
 ![Battery Full](https://github.com/user-attachments/assets/2b7ed049-3bef-428e-8248-d2af69852dfa)
 ![Battery Discharging](https://github.com/user-attachments/assets/7e7c0ba1-f466-4437-adfd-bec5fc920682)
 
-## About the Repository
-**This is my first project.**  
-I’m new to GitHub and bash scripting, and I created this script with my current knowledge and some assistance from ChatGPT to solve a problem I couldn’t find a solution for.  
 **Tested only on a ThinkPad T480.**
 ## UPDATE
 Now updated with a battery alert script that sends a notification when one of the 2 battery is under 7%. 
