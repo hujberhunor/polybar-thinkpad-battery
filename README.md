@@ -27,7 +27,7 @@ Notification depends on `notify-send`.
   ![rofi](https://github.com/hujberhunor/polybar-thinkpad-battery/assets/50179148/f66044d5-9d2a-458a-9d66-3bb00c8c0851)
 
 ## Features
-- Calculates the weighted average of battery charge based on capacity (24Wh, 48Wh, or 72Wh)
+- Calculates the weighted average of battery charge based on capacity (24Wh, or 72Wh)
 - Displays charge status (charging, discharging, AC power) and current power consumption
 - A single click opens a Rofi-based menu with detailed battery information
 - Automatically detects and adjusts for battery swaps (e.g., switching between 24Wh and 72Wh)
@@ -37,7 +37,7 @@ Notification depends on `notify-send`.
 - `rofi` (for the clickable menu)
 - `Nerd Fonts` or `Awesome Fonts` (for icons)
 
-## \*\* \*\*Installation
+## Installation
 
 1. **Copy the scripts to an accessible location, e.g.:**
 
